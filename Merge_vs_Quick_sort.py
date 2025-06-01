@@ -99,35 +99,6 @@ end_timer2 = time.time()
 arq.close()
 print(f"tempo (merge) : {end_timer1 - start_timer1}\n tempo(quick) : {end_timer2 - start_timer2}\n")
 
-print("FILE: 1000000.TXT \n")
-arq = open("1000000.txt", "r+")
-content = []
-for line in arq:
-    numbers = line.strip().split(",")
-    content.extend(int(num) for num in numbers)
-start_timer1 = time.time()
-merge_sort(content, 0, len(content) - 1)
-end_timer1 = time.time()
-start_timer2 = time.time()
-#quick_sort(content, 0, len(content) - 1)
-end_timer2 = time.time()
-arq.close()
-print(f"tempo (merge) : {end_timer1 - start_timer1}\n tempo(quick) : {end_timer2 - start_timer2}\n")
-
-print("FILE: 10000000.TXT \n")
-arq = open("10000000.txt", "r+")
-content = []
-for line in arq:
-    numbers = line.strip().split(",")
-    content.extend(int(num) for num in numbers)
-start_timer1 = time.time()
-merge_sort(content, 0, len(content) - 1)
-end_timer1 = time.time()
-start_timer2 = time.time()
-#quick_sort(content, 0, len(content) - 1)
-end_timer2 = time.time()
-arq.close()
-print(f"tempo (merge) : {end_timer1 - start_timer1}\n tempo(quick) : {end_timer2 - start_timer2}\n")
 
 
 
